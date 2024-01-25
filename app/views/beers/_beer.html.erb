@@ -1,0 +1,21 @@
+<div id="<%= dom_id beer %>">
+  <p>
+    <strong>Name:</strong>
+    <%= beer.name %>
+  </p>
+
+  <p>
+    <strong>Price:</strong>
+    <%= number_to_currency beer.price %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= beer.description %>
+  </p>
+
+  <p>
+    Brewed by <%= link_to beer.company.name, company_path(beer.company) %>
+  </p>
+
+</div>

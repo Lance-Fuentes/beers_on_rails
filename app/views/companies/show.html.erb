@@ -1,0 +1,18 @@
+<h1>Company Name: <%= @company.name%></h1>
+<p>
+  This brewery produces <%= @company.beers.count%>
+  beers.
+</p>
+<h2>
+  Beers
+</h2>
+<ul>
+  <% @company.beers.each do |beer|%>
+  <li>
+    <%= link_to beer.name, beer%>
+  </li>
+  <% end %>
+</ul>
+<p>
+  <%= link_to 'Home', companies_path %>
+</p>
